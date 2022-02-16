@@ -4,6 +4,7 @@ import os
 import json
 import time
 import logging
+import random
 
 URL_JKDK_LIST = 'http://ehallapp.nju.edu.cn/xgfw/sys/yqfxmrjkdkappnju/apply/getApplyInfoList.do'
 URL_JKDK_APPLY = 'http://ehallapp.nju.edu.cn/xgfw/sys/yqfxmrjkdkappnju/apply/saveApplyInfos.do'
@@ -11,6 +12,8 @@ URL_JKDK_APPLY = 'http://ehallapp.nju.edu.cn/xgfw/sys/yqfxmrjkdkappnju/apply/sav
 auth = NjuUiaAuth()
 
 if __name__ == "__main__":
+    t = random.randint(0,300)
+    time.sleep(t)
     load_dotenv(verbose=True)
     logging.basicConfig(
         level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
